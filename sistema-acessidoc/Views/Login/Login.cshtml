@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+@if (ViewBag.MensagemSucesso != null)
+{
+    <div class="alert alert-success">
+        @ViewBag.MensagemSucesso
+    </div>
+}
+
+<link rel="stylesheet" href="/css/login.css" asp-append-version="true" />
+
+<form asp-controller="Login" asp-action="Login" method="post">
+    <section class="background-radial-gradient overflow-hidden">
+        <div class="container">
+            <div class="content-center">
+                <div class="content-left">
+                    <div class="container-nome-sistema">
+                        <h1>AcessiDoc</h1>
+                    </div>
+                </div>
+                <div class="content-right">
+                    <div class="card bg-glass">
+                        <div class="card-body px-4 py-5">
+                            <div class="formulario">
+                                <div class="container-login">
+                                    <h1>Login</h1>
+                                </div>
+                                <div class="form-">
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="email" id="form-email" name="email" class="form-control" placeholder="E-mail" />
+                                    </div>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="password" id="form-senha" name="senha" class="form-control" placeholder="Senha" />
+                                    </div>
+                                </div>
+                                <div class="container-button">
+                                    <button type="submit">Entrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
