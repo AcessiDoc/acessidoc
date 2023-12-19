@@ -1,0 +1,164 @@
+﻿/*
+    Para deixar o site responsivo foi utilizado as media screen:
+
+    1. Elementos serão empilhados verticalmente em telas menores como smartphones;
+    2. Nos demais tamanho o conteúdo será centralizado se ajustando conforme tamanho disponível;
+    3. https://pt.stackoverflow.com/questions/96554/queries-media-para-sites-100-responsivo
+    4. https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+
+*/
+
+@media screen and (max-width: 767px) {
+    .content-center {
+        flex-direction: column;
+    }
+
+    .content-left,
+    .content-right {
+        padding: 2rem; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        min-height: 100vh;
+    }
+
+    .content-center {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content-left {
+        flex: 1;
+        padding: 5rem;
+    }
+
+    .content-right {
+        flex: 1;
+        padding: 8rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container-nome-sistema {
+        font-size: 2rem;
+    }
+
+    .container-login {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/* CSS - Padrão para componentes da tela de Login */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    color: #6c757d;
+    text-align: left;
+    background: #000000;
+    background: -webkit-linear-gradient(to right, #0f9b0f, #000000);
+    background: linear-gradient(to right, #0f9b0f, #000000);
+}
+
+.form-outline input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+}
+
+    .form-outline input:focus {
+        border-color: #007bff;
+    }
+
+    .form-outline input:not(:placeholder-shown) {
+        border-color: #007bff;
+    }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-left {
+    z-index: 10;
+    color: #ffffff;
+    margin: 0;
+}
+
+.content-right {
+    position: relative;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container-nome-sistema {
+    color: #FFF;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+    font-size: 3.2rem;
+    box-sizing: border-box;
+}
+
+.container-login {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #006400;
+}
+
+.form-outline {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.container-button {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+button {
+    background-color: #006400;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #0b1605;
+    }
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/* CSS - da mensagem de erro do login */
+
+.text-danger {
+    color: red;
+}

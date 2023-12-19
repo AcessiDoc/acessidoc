@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+@if (ViewBag.MensagemSucesso != null)
+{
+    <div class="alert alert-success">
+        @ViewBag.MensagemSucesso
+    </div>
+}
+@if (ViewBag.MensagemErro != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.MensagemErro
+    </div>
+}
+
+<link rel="stylesheet" href="/css/login.css" asp-append-version="true" />
+
+<form asp-controller="Login" asp-action="Login" method="post">
+    <section class="background-radial-gradient overflow-hidden">
+        <div class="container">
+            <div class="content-center">
+                <div class="content-left">
+                    <div class="container-nome-sistema">
+                        <h1>AcessiDoc</h1>
+                    </div>
+                </div>
+                <div class="content-right">
+                    <div class="card bg-glass">
+                        <div class="card-body px-4 py-5">
+                            <div class="formulario">
+                                <div class="container-login">
+                                    <h1>Login</h1>
+                                </div>
+                                <div class="form-">
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <!-- Verifica se o objeto Model não é nulo antes de acessar suas propriedades -->
+                                        @if (Model != null)
+                                        {
+                                            <input type="email" id="form-email" name="email" class="form-control" placeholder="E-mail" value="@Model.Email" />
+                                        }
+                                        else
+                                        {
+                                            <input type="email" id="form-email" name="email" class="form-control" placeholder="E-mail" />
+                                        }
+                                        @Html.ValidationMessage("Email", "", new { @class = "text-danger" })
+                                    </div>
+                                    
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        @if (Model != null)
+                                        {
+                                            <input type="password" id="form-senha" name="senha" class="form-control" placeholder="Senha" value="@Model.Senha" />
+                                        }
+                                        else
+                                        {
+                                            <input type="password" id="form-senha" name="senha" class="form-control" placeholder="Senha" />
+                                        }
+                                        @Html.ValidationMessage("Senha", "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="container-button">
+                                    <button type="submit">Entrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
