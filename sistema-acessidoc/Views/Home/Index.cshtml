@@ -1,8 +1,111 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tela Home</title>
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #fff;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" _msttexthash="378430" _msthash="99">
+                <strong><font color="##1f8420" size="5"> AcessiDoc </font></strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04" aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation" _msthidden="A" _mstaria-label="320099" _msthash="100">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor04">
+                <ul class="navbar-nav me-auto">
+                </ul>
+                <form class="d-flex search-form">
+                    <div class="search-bar">
+                        <input type="search" name="search" placeholder="Pesquisar" pattern=".*\S.*" required>
+                        <button class="search-btn" type="submit">
+                            <img src="~/icons/lupa.png" alt="Ícone de Pesquisa">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-options">
+        <section class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center mb-5">
+                        <h1 class="display-4 font-weight-bolder">Promova a inclusão: adapte o aprendizado para todos.</h1>
+                        <br />
+                        <br />
+                        <p class="lead">Anexe um arquivo (PDF ou DOC) e escolha as opções desejadas:</p>
+                        <div class="container-form-attach-file">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1"></label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-options-cards">
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card text-dark card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?study,study');">
+                        <img class="card-img d-none" src="https://source.unsplash.com/600x900/?study,study" alt="Design de Maneira Criativa Lorem Ipsum Sit Amet Consectetur dipisi?">
+                        <div class="card-img-overlay d-flex flex-column">
+                            <div class="card-body">
+                                <small class="card-meta mb-2"><strong>NOVA EDIÇÃO</strong></small>
+                                <h4 class="card-title mt-0 ">LIVRO</h4>
+                                <br />
+                                <h6 class="card-title mt-0 ">Escolha o tamanho da fonte:</h6>
+                            </div>
+                            <div class="cartão-rodapé">
+                                <section class="container-fonte-documento">
+                                    <h6><strong><span class="white-text">Fontes:</span></strong></h6>
+                                    <button class="btn btn-primary" type="submit">18</button>
+                                    <button class="btn btn-primary" type="submit">24</button>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card text-dark card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?study,book');">
+                        <img class="card-img d-none" src="https://source.unsplash.com/600x900/?study,book" alt="Design de Maneira Criativa Lorem Ipsum Sit Amet Consectetur dipisi?">
+                        <div class="card-img-overlay d-flex flex-column">
+                            <div class="card-body">
+                                <small class="card-meta mb-2"><strong>NOVA EDIÇÃO</strong></small>
+                                <h4 class="card-title mt-0 ">PROVA</h4>
+                                <br />
+                                <h6 class="card-title mt-0 ">Escolha o tamanho da fonte:</h6>
+                            </div>
+                            <div class="cartão-rodapé">
+                                <section class="container-fonte-documento">
+                                    <h6><strong><span class="white-text">Fontes:</span></strong></h6>
+                                    <button class="btn btn-primary" type="submit">18</button>
+                                    <button class="btn btn-primary" type="submit">24</button>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-acesso-rapido">
+                    <h6 class="display-6 font-weight-bolder">Acesso rápido</h6>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

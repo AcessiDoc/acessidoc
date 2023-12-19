@@ -5,13 +5,16 @@
 
 @if (ViewBag.MensagemSucesso != null)
 {
-    <div class="alert alert-success">
+    <div class="custom-alert success">
+        <span class="icon">&#10003;</span>
         @ViewBag.MensagemSucesso
     </div>
 }
+
 @if (ViewBag.MensagemErro != null)
 {
-    <div class="alert alert-danger">
+    <div class="custom-alert error">
+        <span class="icon">&#9888;</span>
         @ViewBag.MensagemErro
     </div>
 }
@@ -70,4 +73,4 @@
             </div>
         </div>
     </section>
-</form>m>
+</form>

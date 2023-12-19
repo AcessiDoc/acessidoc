@@ -1,3 +1,10 @@
+// Direitos autorais (c) 2023-2024. Todos os direitos reservados.
+//
+// Este arquivo é parte do projeto AcessiDoc - Sistema de Conversão de Provas
+// e Livros para estudantes com baixa-visão. O código-fonte contido neste arquivo
+// destina-se apenas como um complemento à documentação e é fornecido
+// "como está", sem garantia de qualquer tipo, expressa ou implícita.
+
 using Microsoft.EntityFrameworkCore;
 using sistema_acessidoc.Context;
 

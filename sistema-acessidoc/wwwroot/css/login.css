@@ -157,8 +157,12 @@ button {
 
 /*------------------------------------------------------------------------------------------------------------------*/
 
-/* CSS - da mensagem de erro do login */
+/* CSS - dos avisos da tela de login */
 
-.text-danger {
-    color: red;
+.custom-alert {
+    color: white;
+    font-size: 16px;
 }
+    .custom-alert .icon {
+        margin-right: 8px;
+    }

@@ -26,13 +26,13 @@ public class LoginController : Controller
 
         if (usuario != null)
         {
-            // Login valido, redireciona para a página inicial
+            // Login válido, redireciona para a página inicial
             return RedirectToAction("Index", "Home");
         }
         else
         {
-            // Login invalido, exiba uma mensagem de erro
-            ViewBag.MensagemErro = "Login Invalido Tente novamente.";
+            // Login inválido, exiba uma mensagem de erro
+            ViewBag.MensagemErro = "Login inválido, tente novamente.";
             return View();
         }
     }
