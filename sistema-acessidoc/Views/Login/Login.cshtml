@@ -9,6 +9,12 @@
         @ViewBag.MensagemSucesso
     </div>
 }
+@if (ViewBag.MensagemErro != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.MensagemErro
+    </div>
+}
 
 <link rel="stylesheet" href="/css/login.css" asp-append-version="true" />
 
@@ -30,10 +36,28 @@
                                 </div>
                                 <div class="form-">
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="email" id="form-email" name="email" class="form-control" placeholder="E-mail" />
+                                        <!-- Verifica se o objeto Model não é nulo antes de acessar suas propriedades -->
+                                        @if (Model != null)
+                                        {
+                                            <input type="email" id="form-email" name="email" class="form-control" placeholder="E-mail" value="@Model.Email" />
+                                        }
+                                        else
+                                        {
+                                            <input type="email" id="form-email" name="email" class="form-control" placeholder="E-mail" />
+                                        }
+                                        @Html.ValidationMessage("Email", "", new { @class = "text-danger" })
                                     </div>
+
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="password" id="form-senha" name="senha" class="form-control" placeholder="Senha" />
+                                        @if (Model != null)
+                                        {
+                                            <input type="password" id="form-senha" name="senha" class="form-control" placeholder="Senha" value="@Model.Senha" />
+                                        }
+                                        else
+                                        {
+                                            <input type="password" id="form-senha" name="senha" class="form-control" placeholder="Senha" />
+                                        }
+                                        @Html.ValidationMessage("Senha", "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <div class="container-button">
@@ -46,4 +70,4 @@
             </div>
         </div>
     </section>
-</form>
+</form>m>

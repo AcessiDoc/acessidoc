@@ -15,7 +15,7 @@
 
     .content-left,
     .content-right {
-        padding: 2rem; 
+        padding: 2rem;
     }
 }
 
@@ -154,3 +154,11 @@ button {
     button:hover {
         background-color: #0b1605;
     }
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/* CSS - da mensagem de erro do login */
+
+.text-danger {
+    color: red;
+}
