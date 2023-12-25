@@ -1,5 +1,5 @@
-﻿@{
-    ViewData["Title"] = "Login";
+﻿﻿@{
+    ViewData["Title"] = "AcessiDoc";
     Layout = null;
 }
 
@@ -19,6 +19,7 @@
     </div>
 }
 
+<title>@ViewData["Title"] - Login</title>
 <link rel="stylesheet" href="/css/login.css" asp-append-version="true" />
 
 <form asp-controller="Login" asp-action="Login" method="post">
@@ -28,6 +29,14 @@
                 <div class="content-left">
                     <div class="container-nome-sistema">
                         <h1>AcessiDoc</h1>
+                    </div>
+                    <div class="container-frase-sistema">
+                        <p>
+                            <strong>
+                                <br />Crie provas e livros acessíveis a todos, <br />
+                                para garantir igualdade de acesso ao conhecimento.
+                            </strong>
+                        </p>
                     </div>
                 </div>
                 <div class="content-right">
@@ -50,7 +59,6 @@
                                         }
                                         @Html.ValidationMessage("Email", "", new { @class = "text-danger" })
                                     </div>
-
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         @if (Model != null)
                                         {

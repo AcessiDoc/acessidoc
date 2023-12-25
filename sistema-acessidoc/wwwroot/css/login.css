@@ -1,13 +1,4 @@
-﻿/*
-    Para deixar o site responsivo foi utilizado as media screen:
-
-    1. Elementos serão empilhados verticalmente em telas menores como smartphones;
-    2. Nos demais tamanho o conteúdo será centralizado se ajustando conforme tamanho disponível;
-    3. https://pt.stackoverflow.com/questions/96554/queries-media-para-sites-100-responsivo
-    4. https://www.w3schools.com/css/css_rwd_mediaqueries.asp
-
-*/
-
+﻿
 @media screen and (max-width: 767px) {
     .content-center {
         flex-direction: column;
@@ -57,15 +48,37 @@
 /*------------------------------------------------------------------------------------------------------------------*/
 
 /* CSS - Padrão para componentes da tela de Login */
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.5;
     color: #6c757d;
-    text-align: left;
+    text-align: center;
     background: #000000;
     background: -webkit-linear-gradient(to right, #0f9b0f, #000000);
     background: linear-gradient(to right, #0f9b0f, #000000);
+}
+
+.container-nome-sistema {
+    color: #FFF;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+    font-size: 3.8rem;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: -90px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+container-frase-sistema {
+    color: #FFF;
+    font-size: 1.2rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin-top: 0px;
+    margin-bottom: -1px;
+    margin-right: 80px;
+    margin-left: 80px;
 }
 
 .form-outline input {
@@ -88,7 +101,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .content-center {
@@ -108,14 +121,6 @@ body {
     background: rgba(255, 255, 255, 1);
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.container-nome-sistema {
-    color: #FFF;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    text-align: center;
-    font-size: 3.2rem;
-    box-sizing: border-box;
 }
 
 .container-login {
@@ -153,16 +158,4 @@ button {
 
     button:hover {
         background-color: #0b1605;
-    }
-
-/*------------------------------------------------------------------------------------------------------------------*/
-
-/* CSS - dos avisos da tela de login */
-
-.custom-alert {
-    color: white;
-    font-size: 16px;
-}
-    .custom-alert .icon {
-        margin-right: 8px;
     }

@@ -18,7 +18,6 @@
 
     .container-options .card {
         border: none;
-        transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
         overflow: hidden;
         border-radius: 20px;
         min-height: 450px;
@@ -27,7 +26,7 @@
 
 /* Estilo para a cor branca */
 .white-text {
-    color: #fff; /* Cor branca */
+    color: #fff; 
 }
 
 /* Classe que altera a posição dos cards*/
@@ -64,40 +63,33 @@
         margin-bottom: 0.5rem;
     }
 
-/**/
-.container-options .card.card-has-bg {
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position: center center;
+
+.container-options .card.card-has-bg:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
-    .container-options .card.card-has-bg:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: inherit;
-        -webkit-filter: grayscale(1);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        -o-filter: grayscale(100%);
-        filter: grayscale(100%);
+.container-options .card.card-has-bg:hover {
+    transform: scale(0.98);
+    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
+}
+
+    .container-options .card.card-has-bg:hover .card-img-overlay {
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        background: rgb(255, 186, 33);
+        background: linear-gradient(0deg, rgba(255, 186, 33, 0.5) 0%, rgba(255, 186, 33, 1) 100%);
     }
 
-    .container-options .card.card-has-bg:hover {
-        transform: scale(0.98);
-        box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
-        background-size: 130%;
-    }
-
-        .container-options .card.card-has-bg:hover .card-img-overlay {
-            transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-            background: rgb(255, 186, 33);
-            background: linear-gradient(0deg, rgba(255, 186, 33, 0.5) 0%, rgba(255, 186, 33, 1) 100%);
-        }
 
 .container-options .card-footer {
     background: none;
@@ -119,15 +111,6 @@
     letter-spacing: 2px;
 }
 
-.container-options .card-body {
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-    .container-options .card-body:hover {
-        margin-top: 30px;
-        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
 .container-options .card:hover {
     cursor: pointer;
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -139,17 +122,11 @@
     background: linear-gradient(0deg, rgba(255, 186, 33, 0.3785889355742297) 0%, rgba(255, 186, 33, 1) 100%);
 }
 
-@media (max-width: 767px) {
+.file-input {
+    display: flex;
+    margin-top: 3rem;
+    padding: 1rem;
 }
-
-.container-acesso-rapido {
-    margin-left: 2rem;
-    background-color: #2AB11E;
-}
-        .h6 {
-            display: block;
-        }
-
 
 /* Estilo para a barra de pesquisa */
 .search-form {
@@ -175,7 +152,7 @@
 
 .search-btn {
     background-color: #ffff;
-    color: #fff; /* Cor do texto e do ícone */
+    color: #fff; 
     border: none;
     padding: 0.5em 1em;
     cursor: pointer;
@@ -196,6 +173,33 @@
     /* Estilo para o ícone de pesquisa */
     .search-btn img {
         vertical-align: middle;
-        width: 1.3rem; /* ajuste conforme necessário */
-        height: 1.3rem; /* ajuste conforme necessário */
+        width: 1.3rem; 
+        height: 1.3rem; 
+    }
+
+/*Estilo para o botão*/
+.container-button {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+}
+
+button {
+    background-color: #008000;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #0b1605;
     }
