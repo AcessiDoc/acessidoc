@@ -37,7 +37,7 @@
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AcessoRapido">
-                            <strong><font color="#006400" size="3"> Acesso Rápido </font></strong>
+                            <strong><font color="#006400" size="3"> Minhas edições </font></strong>
                         </a>
                     </li>
                 </ul>
@@ -69,29 +69,25 @@
                                         <div>
                                             @if (Model != null)
                                             {
-                                                <input type="radio" id="fonte_dezoito_null" name="fonte_arquivo" value="18" @(Model.TamanhoFonteArquivo.HasValue ? "checked" : "")>
-                                                <label for="fonte_dezoito_null"><b>18</b></label>
+                                                <input type="radio" id="fonte_dezoito_null_livro" name="fonte_arquivo" value="18" @(Model.TamanhoFonteArquivo.HasValue ? "checked" : "")>
+                                                <label for="fonte_dezoito_null_livro"><b>18</b></label>
                                                 <br>
-                                                <input type="radio" id="fonte_vinte_quatro_null" name="fonte_arquivo" value="24" @(Model.TamanhoFonteArquivo.HasValue ? "checked" : "")>
-                                                <label for="fonte_vinte_quatro_null"><b>24</b></label>
-                                                <br />
-                                                <br />
-                                                <br />
-                                                <input type="hidden" name="MAX_FILE_SIZE" value="100" /> <input name="file" type="file" />
+                                                <input type="radio" id="fonte_vinte_quatro_null_livro" name="fonte_arquivo" value="24" @(Model.TamanhoFonteArquivo.HasValue ? "checked" : "")>
+                                                <label for="fonte_vinte_quatro_null_livro"><b>24</b></label>
                                             }
                                             else
                                             {
                                                 <div>
-                                                    <input type="radio" id="fonte_dezoito_notnull" name="fonte_arquivo" value="18">
-                                                    <label for="fonte_dezoito_notnull"><b>18</b></label>
+                                                    <input type="radio" id="fonte_dezoito_notnull_livro" name="fonte_arquivo" value="18">
+                                                    <label for="fonte_dezoito_notnull_livro"><b>18</b></label>
                                                     <br>
-                                                    <input type="radio" id="fonte_vinte_quatro_notnull" name="fonte_arquivo" value="24">
-                                                    <label for="fonte_vinte_quatro_notnull"><b>24</b></label>
-                                                    <br />
-                                                    <br />
-                                                    <input type="hidden" name="MAX_FILE_SIZE" value="100" /> <input name="file" type="file" />
+                                                    <input type="radio" id="fonte_vinte_quatro_notnull_livro" name="fonte_arquivo" value="24">
+                                                    <label for="fonte_vinte_quatro_notnull_livro"><b>24</b></label>
                                                 </div>
                                             }
+                                            <br />
+                                            <br />
+                                            <input type="hidden" name="MAX_FILE_SIZE" value="100" /> <input name="file" type="file" />
                                         </div>
                                         <div>
                                             @Html.ValidationMessageFor(model => model.TamanhoFonteArquivo, "", new { @class = "text-danger" })
@@ -118,28 +114,25 @@
                                         <div>
                                             @if (Model != null)
                                             {
-                                                <input type="radio" id="fonte_dezoito_null" name="fonte_arquivo" value="18" @(Model.TamanhoFonteArquivo.HasValue ? "checked" : "")>
-                                                <label for="fonte_dezoito_null"><b>18</b></label>
+                                                <input type="radio" id="fonte_dezoito_null_prova" name="fonte_arquivo" value="18" @(Model.TamanhoFonteArquivo.HasValue ? "checked" : "")>
+                                                <label for="fonte_dezoito_null_prova"><b>18</b></label>
                                                 <br>
-                                                <input type="radio" id="fonte_vinte_quatro_null" name="fonte_arquivo" value="24" @(Model.TamanhoFonteArquivo.HasValue ? "checked" : "")>
-                                                <label for="fonte_vinte_quatro_null"><b>24</b></label>
-                                                <br />
-                                                <br />
-                                                <input type="hidden" name="MAX_FILE_SIZE" value="100" /> <input name="file" type="file" />
+                                                <input type="radio" id="fonte_vinte_quatro_null_prova" name="fonte_arquivo" value="24" @(Model.TamanhoFonteArquivo.HasValue ? "checked" : "")>
+                                                <label for="fonte_vinte_quatro_null_prova"><b>24</b></label>
                                             }
                                             else
                                             {
                                                 <div>
-                                                    <input type="radio" id="fonte_dezoito_notnull" name="fonte_arquivo" value="18">
-                                                    <label for="fonte_dezoito_notnull"><b>18</b></label>
+                                                    <input type="radio" id="fonte_dezoito_notnull_prova" name="fonte_arquivo" value="18">
+                                                    <label for="fonte_dezoito_notnull_prova"><b>18</b></label>
                                                     <br>
-                                                    <input type="radio" id="fonte_vinte_quatro_notnull" name="fonte_arquivo" value="24">
-                                                    <label for="fonte_vinte_quatro_notnull"><b>24</b></label>
-                                                    <br />
-                                                    <br />
-                                                    <input type="hidden" name="MAX_FILE_SIZE" value="100" /> <input name="file" type="file" />
+                                                    <input type="radio" id="fonte_vinte_quatro_notnull_prova" name="fonte_arquivo" value="24">
+                                                    <label for="fonte_vinte_quatro_notnull_prova"><b>24</b></label>
                                                 </div>
                                             }
+                                            <br />
+                                            <br />
+                                            <input type="hidden" name="MAX_FILE_SIZE" value="100" /> <input name="file" type="file" />
                                         </div>
                                         <div>
                                             @Html.ValidationMessageFor(model => model.TamanhoFonteArquivo, "", new { @class = "text-danger" })

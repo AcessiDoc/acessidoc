@@ -20,7 +20,7 @@ namespace sistema_acessidoc.Controllers
             return View();
         }
 
-        public IActionResult AcessoRapido()
+        public IActionResult MinhasEdicoes()
         {
             return View();
         }

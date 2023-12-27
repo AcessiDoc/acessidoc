@@ -5,17 +5,27 @@
 
 @if (ViewBag.MensagemSucesso != null)
 {
-    <div class="custom-alert success">
+    <div class="custom-alert success white-text">
         <span class="icon">&#10003;</span>
         @ViewBag.MensagemSucesso
+        <style>
+            .white-text{
+                color: white;
+            }
+        </style>
     </div>
 }
 
 @if (ViewBag.MensagemErro != null)
 {
-    <div class="custom-alert error">
+    <div class="custom-alert error white-text">
         <span class="icon">&#9888;</span>
         @ViewBag.MensagemErro
+        <style>
+            .white-text {
+                color: white;
+            }
+        </style>
     </div>
 }
 
